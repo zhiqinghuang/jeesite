@@ -1,6 +1,3 @@
-/**
- * Copyright &copy; 2012-2014 <a href="https://github.com/thinkgem/jeesite">JeeSite</a> All rights reserved.
- */
 package com.thinkgem.jeesite.tools;
 
 import java.io.BufferedReader;
@@ -10,16 +7,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-/**
- * 代码行数统计
- * @author ThinkGem
- * @version 2014-7-22
- */
 public class CodeCounter {
 
-	/**
-	 * 代码行数统计
-	 */
 	public static void main(String[] args) {
 		String file = CodeCounter.class.getResource("/").getFile();
 		String path = file.replace("target/test-classes", "src");
@@ -43,11 +32,6 @@ public class CodeCounter {
 	static long blankLines = 0;
 	static ArrayList<File> fileArray = new ArrayList<File>();
 	
-	/**
-	 * 获得目录下的文件和子目录下的文件
-	 * @param f
-	 * @return
-	 */
 	public static ArrayList<File> getFile(File f) {
 		File[] ff = f.listFiles();
 		for (File child : ff) {
@@ -60,10 +44,6 @@ public class CodeCounter {
 
 	}
 
-	/**
-	 * 统计方法
-	 * @param f
-	 */
 	private static void count(File f) {
 		BufferedReader br = null;
 		boolean flag = false;
